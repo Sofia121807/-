@@ -16,6 +16,8 @@ internal class Program
         account1.MakeWithdrawal(26, DateTime.UtcNow, ":(");
         Console.WriteLine(account1.Balance);
 
+        Console.WriteLine(account1.GetAccountHistory());
+
         try
         {
             account2.MakeWithdrawal(3292, DateTime.UtcNow, ":(");

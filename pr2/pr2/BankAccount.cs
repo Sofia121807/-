@@ -1,4 +1,6 @@
-﻿namespace pr2;
+﻿using System.Text;
+
+namespace pr2;
 
 internal class BankAccount
 {
@@ -49,4 +51,20 @@ internal class BankAccount
         var withdawal = new Transactionn(-amount, date, note);
         _allTransactions.Add(withdawal);
     }
+
+    public string GetAccountHistory()
+    {
+        var report = new StringBuilder();
+
+        decimal balance = 0;
+        report.AppendLine("Data\t\tAmount\tBalance\tNote");
+        foreach (var item in _allTransactions) 
+        {
+            balance += item.Amount;
+            report.AppendLine($"{item.date.ToShortDateString()}\t" + $"{item.Amount}\t{item.Note}");
+        }
+        return report.ToString();
+    }
+
+
 }
