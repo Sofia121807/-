@@ -42,7 +42,7 @@ internal class BankAccount
     {
         if (amount <= 0)
         {
-            throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive");
+            throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive  ");
         }
         if (Balance < amount)
         {
