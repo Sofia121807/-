@@ -120,7 +120,7 @@ class Program
     /// <param name="trainNumber">Номер поезда для поиска (например, "№123").</param>
     /// <param name="trains">Список всех поездов.</param>
     /// <param name="drivers">Список всех машинистов.</param>
-    /// <returns>Объект Driver, если поезд и машинист найдены; иначе null.</retu rns >
+    /// <returns>Объект Driver, если поезд и машинист найдены; иначе null.</returns >
     static Driver? FindDriver(string trainNumber, List<Train> trains, List<Driver> drivers)
     {
         if (trainNumber == null || trains == null || drivers == null)
