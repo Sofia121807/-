@@ -10,7 +10,7 @@
   <Class Name="pr2.BankAccount">
     <Position X="6.5" Y="1.25" Width="4.5" />
     <TypeIdentifier>
-      <HashCode>IAAAACCAQAAAAAAEAEgAAAAAAABAAQAAAAAAAQAAAAA=</HashCode>
+      <HashCode>YAAAACCAQAAAAAAEAEgAAAAAACBAAQAAAAAAAQAAAAA=</HashCode>
       <FileName>BankAccount.cs</FileName>
     </TypeIdentifier>
   </Class>
