@@ -5,7 +5,7 @@ public class GiftCartAccount : BankAccount
     private readonly decimal _monthlyDeposit = 0m;
 
     //_monthlyDeposit  - параметр по умолчанию (прнимает 0),
-    // при создании new GiftCartAccount("Yana",1000); => monthlyDeposit = 0
+    // при создании new GiftCartAccount("Yana", 1000); => monthlyDeposit = 0
     //new GiftCartAccount("Yana",1000, 5000); => monthlyDeposit = 5000
 
     public GiftCartAccount(string name, decimal initialBalance, decimal monthlyDeposit = 0) : base(name,initialBalance) 
