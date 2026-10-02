@@ -5,7 +5,7 @@ public class InterestEarningAccount : BankAccount
     public InterestEarningAccount(string name, decimal initialBalance) : base(name, initialBalance) { }
 
 
-    // override позволяет в дочернем классе определить новую реализацию метода PerformMonthAndTransactions
+    // override позволяет в дочернем классе определить новую  реализацию метода PerformMonthAndTransactions
     public override void PerformMonthAndTransactions()
     {
         if (Balance > 500m)
