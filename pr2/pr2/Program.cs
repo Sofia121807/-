@@ -27,5 +27,14 @@ internal class Program
         {
             Console.WriteLine(e.Message);
         }
+
+        InterestEarningAccount interestEarning = new("Yana", 1000m); // m - decimal
+
+        interestEarning.MakeDeposit(100m, DateTime.UtcNow, ";)");
+        interestEarning.MakeWithdrawal(10m, DateTime.UtcNow, ";(");
+        interestEarning.PerformMonthAndTransactions();
+        Console.WriteLine(interestEarning.GetAccountHistory());
+
+        Console.WriteLine(interestEarning); // == Console.WriteLine(interestEarning.ToString())
     }
 }
