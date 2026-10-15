@@ -10,7 +10,7 @@ namespace pr2;
 public enum AccountStatus
 {
     /// <summary>
-    /// Regular — комиссия за обслуживание 50 руб/мес
+    /// Regular — комиссия за обслуживание 50 руб/мес.
     /// </summary>
     Regular,
     /// <summary>
