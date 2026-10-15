@@ -26,7 +26,7 @@ public enum OperationType
 }
 
 /// <summary>
-/// Одна запись журнала аудита.
+/// Одна запись журнала аудита
 /// </summary>
 /// <param name="AccountNumber">Номер счёта.</param>
 /// <param name="Type">Тип операции.</param>
