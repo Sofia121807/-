@@ -1,5 +1,8 @@
 ﻿namespace pr2;
 
+/// <summary>
+/// Класс, содержащий вход в программу
+/// </summary>
 public class Program
 {
     static void Main(string[] args)
@@ -43,6 +46,23 @@ public class Program
         giftCart.PerformMonthAndTransactions();
         Console.WriteLine(giftCart);
         Console.WriteLine(giftCart.GetAccountHistory());
+
+        LineOfCreditAccount lineOfCreditAccount = new LineOfCreditAccount("Yana",0,1000m);
+        lineOfCreditAccount.MakeWithdrawal(500m,DateTime.UtcNow,"credit");
+
+        List<BankAccount> accounts = new List<BankAccount>();
+        accounts.Add(account1);
+        accounts.Add(interestEarning);
+        accounts.Add(lineOfCreditAccount);
+        accounts.Add(giftCart);
+
+        foreach (BankAccount account in accounts)
+        {
+            Console.WriteLine(account); // == Console.WriteLine(account.ToString());
+            account.PerformMonthAndTransactions(); //работает полиморфизм 
+            Console.WriteLine(account.GetAccountHistory());
+
+        }
 
     }
 }
