@@ -14,7 +14,7 @@ public enum AccountStatus
     /// </summary>
     Regular,
     /// <summary>
-    /// Premium — комиссия 0 руб/мес, но 1% на остаток свыше 10 000
+    /// Premium — комиссия 0 руб/мес, но 1% на остаток свыше 10 000.
     /// </summary>
     Premium,
     /// <summary>
