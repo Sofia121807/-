@@ -15,7 +15,7 @@ public class BankAccount
     private readonly decimal _minimumBalance;
 
     /// <summary>
-    /// Начальное значение для генерации уникальных номеров счетов.
+    /// Начальное значение для генерации уникальных номеров счетов
     /// </summary>
     static private int s_accountNumberSeed = 1000000000;
 
