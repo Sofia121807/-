@@ -1,4 +1,6 @@
-﻿namespace pr2;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace pr2;
 
 /// <summary>
 /// Класс, содержащий вход в программу
