@@ -46,7 +46,7 @@ public class BankAccount
     }
 
     /// <summary>
-    /// Журнал всех операций по счёту.
+    /// Журнал всех операций по счёту
     /// </summary>
     private List<Transactionn> _allTransactions = new List<Transactionn>();
 
