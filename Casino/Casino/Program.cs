@@ -95,6 +95,6 @@ internal class Program
                 if (answer != "Y" && answer != "y") keepPlayng = false;
             }
         }
-        Console.WriteLine("Спасибо за игру! До встречи в нашем казино)");
+        Console.WriteLine("Спасибо за игру! До встречи в нашем казино))");
     }
 }
