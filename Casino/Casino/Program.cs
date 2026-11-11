@@ -20,6 +20,8 @@ internal class Program
                 break;
             }
 
+            GameSettings currentSettings = GameSettings.ChooseDifficulty();
+
             int bet = 0; //ставка
             bool validBet = false;
 
@@ -40,14 +42,14 @@ internal class Program
                 }
             }
 
-            int secretNumber = random.Next(1, 101);
+            int secretNumber = random.Next(1, currentSettings.MaxNumber+1);
             int attempts = 0;
             bool isGuessed = false;
 
-            Console.WriteLine("Загадано число от 1 до 100. У вас 10 попыток!");
+            Console.WriteLine($"Загадано число от 1 до {currentSettings.MaxNumber}. У вас {currentSettings.MaxAttempts} попыток!");
             Console.WriteLine(" ");
 
-            while (!isGuessed && attempts < 10)
+            while (!isGuessed && attempts < currentSettings.MaxAttempts)
             {
                 Console.WriteLine("Ваш вариант: ");
                 string input = Console.ReadLine();
@@ -57,16 +59,16 @@ internal class Program
                     int userGuess = Convert.ToInt32(input);
                     attempts++;
 
-                    if (userGuess < secretNumber) Console.WriteLine($"Больше! Попытка: {attempts}/10");
-                    else if (userGuess > secretNumber) Console.WriteLine($"Меньше! Попытка: {attempts}/10");
+                    if (userGuess < secretNumber) Console.WriteLine($"Больше! Попытка: {attempts}/{currentSettings.MaxAttempts}");
+                    else if (userGuess > secretNumber) Console.WriteLine($"Меньше! Попытка: {attempts}/{currentSettings.MaxAttempts}");
                     else
                     {
                         isGuessed = true;
                         Console.WriteLine($"\nВы угадали число {secretNumber} с {attempts} попытки!");
 
                         int winnings = 0;
-                        if (attempts == 1) winnings = bet * 10;
-                        else if (attempts <= 5) winnings = bet * 2;
+                        if (attempts == 1) winnings = bet * (currentSettings.WinMultiplier * 2);
+                        else if (attempts <= currentSettings.MaxAttempts/2) winnings = bet * currentSettings.WinMultiplier;
                         else winnings = bet;
 
                         balance += winnings;
