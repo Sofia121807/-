@@ -21,7 +21,7 @@ public class GameSettings
             if (choice == "1") return new GameSettings { MaxNumber = 10, MaxAttempts = 5, WinMultiplier = 2 };
             else if (choice == "2") return new GameSettings { MaxNumber = 100, MaxAttempts = 7, WinMultiplier = 5 };
             else if (choice == "3") return new GameSettings { MaxNumber = 1000, MaxAttempts = 10, WinMultiplier = 10 };
-            else Console.WriteLine("Ошибка! Ввкдите число 1,2 или 3.");
+            else Console.WriteLine("Ошибка! Введите число 1,2 или 3.");
         }
     }
 }
