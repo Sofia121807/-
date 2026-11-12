@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Casino.Interfaces;
+using System;
 using System.IO;
 
-namespace Casino;
+namespace Casino.Services;
 
-public class StatisticManager
+public class StatisticManager : IStatisticManager
 {
     private string _filePath = "casino_stats.txt";
 

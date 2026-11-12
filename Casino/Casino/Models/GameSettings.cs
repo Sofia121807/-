@@ -1,6 +1,8 @@
-﻿namespace Casino;
+﻿using Casino.Interfaces;
 
-public class GameSettings
+namespace Casino.Models;
+
+public class GameSettings: IGameSettings
 {
     public int MaxNumber { get; set; }
     public int MaxAttempts { get; set; }

@@ -1,4 +1,4 @@
-﻿namespace Casino;
+﻿namespace Casino.Models;
 
 internal class GameMessageEventArgs : EventArgs
 {
